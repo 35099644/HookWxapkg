@@ -34,14 +34,6 @@ public class HookX5 implements IXposedHookLoadPackage {
         XposedHelpers.findAndHookMethod(webView, "loadData", String.class, String.class, String.class, x5WebViewCallback);
         XposedHelpers.findAndHookMethod(webView, "loadDataWithBaseURL", String.class, String.class, String.class, String.class, String.class, x5WebViewCallback);
 
-        // 下面是具体的子类,可以不用管
-        // Lcom/tencent/mm/plugin/appbrand/game/page/b loadUrl(Ljava/lang/String;)V
-        // Lcom/tencent/mm/plugin/appbrand/page/s loadUrl(Ljava/lang/String;)V
-        // Lcom/tencent/mm/plugin/appbrand/page/e loadUrl(Ljava/lang/String;)V
-        // Lcom/tencent/xweb/WebView;->loadUrl(Ljava/lang/String;)V
-        // Lcom/tencent/mm/plugin/appbrand/page/l;->loadUrl(Ljava/lang/String;)V        抽象类
-        // com.tencent.mm.ui.widget.MMWebView.loadUrl(Ljava/lang/String;)V0
-
 //        XposedHelpers.findAndHookMethod("com.tencent.mm.plugin.appbrand.game.page.b", loader, "loadUrl", String.class, callback);
 //        XposedHelpers.findAndHookMethod("com.tencent.mm.plugin.appbrand.page.s", loader, "loadUrl", String.class, callback);
 //        XposedHelpers.findAndHookMethod("com.tencent.mm.plugin.appbrand.page.e", loader, "loadUrl", String.class, callback);
